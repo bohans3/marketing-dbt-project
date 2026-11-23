@@ -1,0 +1,8 @@
+version: 2
+
+sources:
+  - name: marketing
+    database: PRACTICE_DB
+    schema: MARKETING
+    tables:
+      - name: campaign_data

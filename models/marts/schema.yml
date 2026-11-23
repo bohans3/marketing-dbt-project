@@ -1,0 +1,26 @@
+version: 2
+
+models:
+  - name: stg_campaign_data
+    columns:
+      - name: channel
+        tests:
+          - not_null
+          - accepted_values:
+              arguments:
+                values: ['Paid Search', 'Email', 'Paid Social', 'Display', 'Video Ads', 'Organic Social']
+      - name: campaign_date
+        tests:
+          - not_null
+      - name: revenue
+        tests:
+          - not_null
+
+  - name: channel_performance
+    columns:
+      - name: channel
+        tests:
+          - unique
+          - not_null
+
+
